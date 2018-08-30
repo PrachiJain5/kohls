@@ -1,0 +1,478 @@
+/***************************
+ GENERAL STYLES + HELPER CLASSES
+***************************/
+
+
+:focus {
+    outline: none !important;
+}
+::-moz-focus-inner {
+border:0;
+}
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.flexbox-parent {
+    font-weight: 300;
+    font-size: 30px;
+    background: #fff;
+    color: #8BC53F;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* align items in Main Axis */
+    align-items: stretch; /* align items in Cross Axis */
+    align-content: stretch; /* Extra space in Cross Axis */
+    overflow: auto;
+}
+/*_:-ms-fullscreen, :root .flexbox-parent {min-height: 650px;}*/
+
+.home-link {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+}
+a.home-link:hover {
+    color: #eee;
+}
+.fa-home {
+}
+.flexbox-item {
+}
+.flexbox-item-grow {
+    flex: 1; /* same as flex: 1 1 auto; */
+}
+.flexbox-item.header {
+    background: #8BC53F;
+    padding: 15px 0;
+    min-width: 320px;
+    position: relative;
+}
+.flexbox-item.content {
+    background: #fff;
+}
+.fill-area {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start; /* align items in Main Axis */
+    align-items: stretch; /* align items in Cross Axis */
+    align-content: stretch; /* Extra space in Cross Axis */
+}
+.fill-area-content {
+}
+.flexbox-item-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, h3, h4 {
+    font-weight: 300;
+}
+h1 {
+    color: #fff;
+    font-size: 42px;
+    line-height: 44px;
+    font-weight: normal;
+    padding: 15px 0 0 0;
+    margin: 0 0 10px 0;
+}
+h2 {
+    font-size: 35px;
+    line-height: 37px;
+}
+header p, .question h2 {
+    font-family: 'Satisfy', cursive;
+    color: #333;
+    font-size: 22px;
+    line-height: 24px;
+    padding: 0 0 25px 0;
+    margin: 0;
+}
+.question h2 {
+    color: #8BC53F;
+    margin: 0;
+    padding: 30px 0 0 0
+}
+.question h3 {
+    margin: 0;
+    padding: 10px 0 20px 0;
+    color: #777;
+    font-size: 42px;
+    line-height: 43px;
+    font-weight: normal;
+}
+.question p {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0 0 26px 0;
+    text-align: left;
+}
+.answer-wrapper ol {
+    margin-left: 20px;
+    padding-left: 0;
+}
+.answer-wrapper ul {
+    margin-left: 30px;
+    padding-left: 0;/*list-style: disc;*/
+}
+.answer-wrapper ol ul {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.answer-wrapper ul li, .answer-wrapper ol li {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    text-align: left;
+}
+.answer-wrapper ul li .fa-li {
+    color: #666;
+}
+.question p.links {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.question p.links a {
+    color: #9966cc;
+    text-decoration: none;
+}
+.question p.links a:hover {
+    text-decoration: underline;
+}
+.question p.btn-print a {
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #9966cc;
+}
+.question p.btn-print a span {
+}
+.question img {
+    max-width: 50%;
+    margin: 20px 0;
+}
+.start {
+    /*height: 300px;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    color: #fff;
+}
+.start span.flexbox-item-center {
+    padding: 20px;
+    width: 187px;
+    height: 187px;
+    border-radius: 240px;
+    margin: 10px 10px 5px 10px;
+    background: #173E70;
+    border: 0;
+    color: #fff;
+    justify-content: center;
+}
+.start span.flexbox-item-center:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+.start p {
+    font-size: 35px;
+    line-height: 38px;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+.start p span {
+    font-size: 60px;
+    line-height: 60px;
+    display: block;
+}
+.start p span.arrows {
+    font-size: 45px;
+    line-height: 40px;
+}
+.restart {
+}
+.hide-quiz {
+    display: none !important;
+}
+.show-quiz {
+    display: block !important;
+}
+/* messes with answer question *[class^='question-'] {} */
+
+.question-0, .question-1 {
+/*  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;*/
+}
+/* messes with answer question *[class^='question-answered'], .question-answered {} */
+.question-0.question-answered, .question-1.question-answered, .question-2.question-answered {
+    display: none;
+}
+.question-2 button.flowchart-button.restart {
+    margin-top: 0;
+}
+.question-2 p.back-link {
+    display: none;
+    width: 100%;
+}
+.question-3 {
+/*margin-top: 250px;*/
+}
+.question {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    line-height: 42px;/*flex: 0 1 100%;*/
+}
+.answer-wrapper {
+    color: #777;
+    /* width: 85%;*/
+    margin: 0 auto;
+}
+.answer-wrapper a {
+/* color: #f93;*/
+}
+.question .answer-wrapper img {
+    margin-left: auto;
+    margin-right: auto;
+}
+button.flowchart-button {
+    border: 0;
+    color: #fff;
+    background: #8BC53F;
+    border: 10px solid #8BC53F;
+    padding: 20px;
+    width: 160px;
+    height: 160px;
+    border-radius: 120px;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0px 12px 12px 12px;
+}
+button.flowchart-button:hover, button.flowchart-button:active {
+    opacity: .8;
+    cursor: pointer;
+}
+button.flowchart-button.restart {
+    font-family: "Roboto Condensed", sans-serif;
+    border: 0px none;
+    padding: 10px 30px;
+    height: auto;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #fff;
+    margin: -15px 0 -10px 0;
+    width: auto;
+    background: #173E70 none repeat scroll 0% 0%;
+}
+button.flowchart-button.restart:hover {
+    opacity: .8;
+    color: #fff;
+    cursor: pointer;
+}
+p.printable {
+    display: none;
+    margin: 30px 0 0 0;
+    text-align: center;
+}
+p.printable a {
+    background: #9966cc url(../media/icon-printer.png) 26px center no-repeat;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 10px 40px 10px 62px;
+    font-weight: 700;
+    font-size: 16px;
+}
+p.printable a:hover {
+    text-decoration: none;
+    background-color: #8BC53F;
+    color: #fff;
+}
+p.print-link a {
+    color: #f93;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+.green.results-bar {
+    color: #333 !important;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 15px;
+    width: 100%;
+}
+.green.results-bar a {
+    color: #fff;
+}
+.quiz-container .last, .quiz-container .last p {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+}
+.quiz-container .last {
+    display: none;
+}
+p.back-link {
+    display: none;
+    margin: -20px 0 0 0;
+}
+p.back-link a {
+    color: #f93;
+    text-decoration: none;
+    font-size: 14px;
+}
+p.back-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* Fixes for IE */
+
+_:-ms-fullscreen, :root body {
+}
+_:-ms-fullscreen, :root .flexbox-parent {
+display:block;
+height:auto;
+overflow: visible;
+}
+_:-ms-fullscreen, :root #footer {
+}
+
+/***************************
+ MEDIA QUERIES
+***************************/
+/* EXTRA SMALL DEVICES (320px and down) */
+@media (max-width: 320px) {
+header {
+    padding: 15px;
+}
+.start-quiz {
+    margin-top: 0;
+}
+.start {
+    margin-bottom: 30px;
+}
+.question-3 {
+    margin-top: 300px;
+}
+.question-3 h3 {
+    font-size: 50px;
+    line-height: 54px;
+}
+}
+
+/* SMALL DEVICES (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* MEDIUM DEVICES (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* LARGE DEVICES (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+@media print {
+}
+.row.flowchart-1 .flowchart-container, .row.flowchart-2 .flowchart-container {
+    border-top: 1px #c9cacb solid;
+    padding-top: 20px;
+	margin-top: 10px;
+}
+.row.flowchart-2 .flowchart-container {
+    border-bottom: 1px #c9cacb solid;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+.flowchart-1 h2, .flowchart-2 h2 {
+    text-transform: uppercase;
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 28px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+.flowchart-1 h3, .flowchart-2 h3 {
+    text-align: left;
+    margin-top: 0;
+    color: #666;
+    font-weight: 300;
+    text-align: left;
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 26px;
+}
+.flowchart-1 .question, .flowchart-2 .question {
+    color: #666;
+    font-weight: 300;
+    text-align: left;
+    margin-top: 0;
+    font-size: 24px;
+    line-height: 26px;
+}
+.question-0, .question-1 {
+    text-align: center;
+}
+button.flowchart-button {
+    text-transform: uppercase;
+    border: 0;
+}
+button.flowchart-button.choice-0-0, button.flowchart-button.choice-1-0 {
+    background-color: #6EBF4C;
+}
+button.flowchart-button.choice-0-1, button.flowchart-button.choice-1-1 {
+    background-color: #16A6B6;
+}
+button.flowchart-button.choice-0-2, button.flowchart-button.choice-1-2 {
+    background-color: #883278;
+}
+.flowchart-1 button.flowchart-button.choice-0-0 {
+    background: #6EBF4C url('../img/flowchart-icon-financial.png') center 35px no-repeat;
+    background-size: 25% 25%;
+    padding-top: 50px;
+}
+.flowchart-1 button.flowchart-button.choice-0-1 {
+    background: #16A6B6 url('../img/flowchart-icon-health.png') center 35px no-repeat;
+    background-size: 25% 25%;
+    padding-top: 50px;
+}
+.flowchart-1 button.flowchart-button.choice-0-2 {
+    background: #883278 url('../img/flowchart-icon-worklife.png') center 35px no-repeat;
+    background-size: 25% 25%;
+    padding-top: 50px;
+}
+.flowchart-2 .question-0 .question {
+    display: none;
+}
+.flowchart-2 .question-0 button {
+    position: relative;
+    margin-bottom: 150px;
+}
+.flowchart-2 .question-0 button span {
+    display: block;
+    position: absolute;
+    font-size: 12px;
+    text-transform: none;
+    top: 180px;
+    left: 0;
+    color: #666;
+    text-align: left;
+}

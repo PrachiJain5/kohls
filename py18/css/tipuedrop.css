@@ -1,0 +1,99 @@
+/*
+Tipue drop 5.0.2
+Copyright (c) 2015 Tipue
+Tipue drop is released under the MIT License
+http://www.tipue.com/drop
+*/
+
+
+#tipue_drop_input {
+    font: 13px/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #333;
+    padding: 13px 13px 13px 40px;
+    width: 170px;
+    border: 1px solid #e2e2e2;
+    border-radius: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    box-shadow: none;
+    outline: 0;
+    margin: 0;/*background: #fff url('img/search.png') no-repeat 15px 15px;*/
+}
+#tipue_drop_content {
+    display: none;
+    position: relative;
+    margin: 13px 20px 0 0;
+    line-height: 0;
+    z-index: 1000;
+    text-align: center;
+}
+.tipue_drop_box {
+    position: relative;
+    background: #fff;
+    border: 1px solid #dcdcdc;
+    border-radius: 2px;
+    box-shadow: 2px 2px 5px #f9f9f9;
+    text-align: left;
+    width: 80%;
+    max-width: 880px;
+    margin: 0 auto;
+}
+.tipue_drop_box:after, .tipue_drop_box:before {
+    position: absolute;
+    pointer-events: none;
+    border: solid transparent;
+    bottom: 100%;
+    content: "";
+    height: 0;
+    width: 0;
+}
+.tipue_drop_box:after {
+    border-bottom-color: #fff;
+    border-width: 8px;
+    left: 42px;
+    margin-left: -8px;
+}
+.tipue_drop_box:before {
+    border-bottom-color: #dcdcdc;
+    border-width: 9px;
+    left: 42px;
+    margin-left: -9px;
+}
+#tipue_drop_wrapper {
+    margin: 0;
+    padding: 0;
+}
+#tipue_drop_wrapper a {
+    text-decoration: none;
+    color: #333;
+}
+.tipue_drop_item {
+    background-color: #fff;
+    padding: 5px 0;
+}
+.tipue_drop_item:hover {
+    background-color: #f7f7f7;
+}
+.tipue_drop_left {
+    /*display: table-cell;*/
+    padding: 0 10px;
+}
+.tipue_drop_left .tipue_search_content_title {
+    margin-left: -10px;
+}
+.tipue_drop_image {
+    width: 50px;
+    height: 50px;
+    border-radius: 27px;
+    border: 2px solid #fff;
+}
+.tipue_drop_right {
+    display: table-cell;
+    vertical-align: middle;
+    /*font: 300 14px/1.6 'Helvetica Neue', Helvetica, Arial, sans-serif;*/
+    font-weight: normal,  font-size: 14px;
+    line-height: 1.6em;
+    color: #333;
+    width: auto;
+    padding: 0 7px;
+}

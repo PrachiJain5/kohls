@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Use Your HSA Wisely</title>
+<link href="css/tipuesearch.css" rel="stylesheet">
+<link href="css/tipuedrop.css" rel="stylesheet">
+<link href="css/iziModal.css" rel="stylesheet" type="text/css">
+<link href="css/tipuesearch.css" rel="stylesheet"  type="text/css">
+
+<!-- slick css -->
+<link href="css/slick.css" rel="stylesheet" type="text/css">
+<link href="css/slick-theme.css" rel="stylesheet" type="text/css">
+
+<!-- Custom Fonts -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- custom -->
+<link href="css/custom.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<!--Font kit-->
+<script src="//use.typekit.net/lna1lqg.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+</head>
+
+<body>
+<div id="wrapper"> 
+  <!-- light box -->
+  
+  <header>
+    <div class="container">
+      <div id="company" title="Kohls Design a life you love"><a href="index.html"><img src="img/kohls-site-logo.png"></a></div>
+      <nav>
+        <div id="menu" title="Menu"> <a href="#" id="customize_population">
+          <ul id="selected_population">
+            <li>Full-time</li>
+            <li>Non-Kaiser</li>
+            <li class="edit"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></li>
+          </ul>
+          </a> </div>
+      </nav>
+    </div>
+  </header>
+  <div id="dialog-form" data-izimodal-group="group1" data-izimodal-loop="">
+    <button data-iziModal-close class="icon-close">x</button>
+    <div id="profile">
+      <div class="lb-header"><img src="img/kohls-site-logo.png"></div>
+    </div>
+    <div id="profileform">
+      <form id="form_pop">
+        <h2>Customize my experience.</h2>
+        <fieldset>
+          <ol>
+            <li>
+              <label>Full-time or part-time?</label>
+              <select id="Select1" class="status" onChange="populationCheck()">
+                <option value="full">Full-time</option>
+                <option value="part">Part-time</option>
+              </select>
+            </li>
+            <li class="ftOnly">
+              <label>My medical coverage eligibility*</label>
+              <select id="Select2" class="medical">
+                <option value="kaiser">CA associates eligible for Kaiser and Anthem (limited locations)*</option>
+<option value="nonkaiser">All other associates (eligible for Anthem and UHC)</option>
+              </select>
+            </li>
+          </ol>
+        </fieldset>  <div class="login-note ftOnly">*Not sure if you’re eligible for Kaiser? View the <a href="pdf/kohls-work-locations.pdf">list of California locations</a> where associates are eligible for the Kaiser Plan.</div>
+        <div class="note">If you don’t make selections, the site will display benefits for full-time associates who are not eligible for the Kaiser Plan.</div>
+
+        <footer>
+          <button class="submit" id="submitForm">Save</button>
+        </footer>
+      </form>
+    </div>
+    <div id="ext" style="display:none;"> Extra text </div>
+  </div>
+  <div id="searchwrapper">
+    <div id="searchbar" class="clearfix">
+      <div class="container">
+        <form name="" id="mainsearch-form">
+          <div class="speech">
+            <input type="text" id="tipue_search_input" autocomplete="off" placeholder="What can we help you with?">
+          </div>
+        </form>
+        <div id="tipue_drop_content"></div>
+        <!--<input type="button" id="tipue_search_button">-->
+        <div id="tipue_search_content">
+          <div id="tipue_search_loading"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <div class="content page">
+      <div class="container">
+        <h1>Use Your HSA Wisely</h1>
+        <p>Here are some things to consider as you think about how to use your HSA money.</p>
+        <p><strong>Estimate timing.</strong> If you need health care, will it be an ongoing expense, or a one&#45;time event? Plan <a target="_blank" href="http://www.healthcare.gov/preventive-care-adults">preventive care visits</a> early in the year, and anything else later, when you have more money in your Health Savings Account (HSA) (if enrolled in the Savers or Basic Plan).</p>
+        <p>Before you pay, <strong>think about which account makes the most sense to use</strong>:</p>
+        <ul>
+          <li>Credit card;</li>
+          <li>Spending/savings accounts through Kohl&rsquo;s&mdash;a <a href="hsa-ftk.html">Health Savings Account (HSA)</a> or <a href="fsa-ft.html">Health Care Flexible Spending Account (FSA)</a>;</li>
+          <li>Checking account; or </li>
+          <li>Cash.</li>
+        </ul>
+      </div>
+      <!--/container--> 
+    </div>
+    <div class="content">
+      <div class="sliderarea">
+        <div class="herotitle">Related</div>
+        <section id='related1' class='hero'></section>
+      </div>
+    </div>
+  </main>
+  <!-- full page search with iziModal -->
+  <div class="" id="myModal">
+    <button data-iziModal-close class="icon-close">x</button>
+    <h2>Search Results</h2>
+    <div id="myDiv"></div>
+    <footer>
+      <button data-izimodal-close="" class="button-close">Close</button>
+    </footer>
+  </div>
+  <div id="totop">
+    <div>Top</div>
+  </div>
+  <div id="dialog-legal" data-izimodal-group="group2" data-izimodal-loop="">
+    <button data-iziModal-close class="icon-close">x</button>
+    <h2>Legal Information</h2>
+    <p>For certain electronic disclosures—like Summary Plan Descriptions (SPDs), Summaries of Benefits and Coverage (SBCs), Notices of Creditable Coverage, Privacy Notices and other legal notices related to the Kohl's Group Health Plan (the "Plan")&mdash;log on to <a href="http://myHR.kohls.com">myHR.kohls.com</a> and select the <em>Health</em> tab; then choose the <em>Plan Summaries &amp; Legal Notices</em> tile. To request copies free of charge, call <span class="phone">844-564-5747,</span> select your preferred language, then select <strong><em>Option 1</em></strong>. Representatives are available Monday through Friday from 7&nbsp;a.m. to 8&nbsp;p.m. (Central time).</p>
+    <p><em>Described herein are certain aspects of and changes to the Kohl's benefit plans. Information presented herein does not replace or alter the official plan documents, insurance contracts or other agreements that legally govern the terms and operation of any plan, policy or program. If information presented herein differs from the official documents, the official documents always govern. Kohl's reserves the right to amend, modify or terminate any plan, policy or program described herein at any time, for any reason and in any respect in its sole discretion. No employment rights are created or provided by the information herein or by your receipt of this information.</em></p>
+  </div>
+  <footer id="inc-en-footer"> </footer>
+</div>
+
+<!-- jQuery --> 
+<script src="js/jquery-1.11.3.min.js"></script> 
+<script src="js/slick.min.js"></script> 
+<script src="js/iziModal.js"></script> <!--Tipue--> 
+<script src="js/tipuedrop.min.js"></script> 
+
+<!-- custom js--> 
+<script src="js/common.js"></script> 
+<script src="js/custom.js"></script> 
+
+<!--Google Analytics--> 
+<script src="ga/google-analytics.js"></script>
+</body>
+</html>
